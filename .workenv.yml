@@ -1,0 +1,8 @@
+test:
+  desktop_number: 4
+  default_desktop: 3
+  commands:
+    [1, "firefox"]
+    [0, "terminator"]
+    [1, "firefox --new-tab https://www.google.fr"]
+    [4, "subl"]
