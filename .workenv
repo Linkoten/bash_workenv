@@ -1,0 +1,9 @@
+#Workenv config file
+
+browser:firefox
+terminal:terminator
+
+@42
+browser:0
+terminal:1
+/42
