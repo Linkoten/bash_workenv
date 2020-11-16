@@ -26,5 +26,4 @@ def parse_value(name):
     commands = []
     for desktop, command in workenv_config[COMMANDS]:
         commands.append(WorkenvCommand(command = command, desktop = desktop))
-    workenv = Workenv(desktop_number = workenv_config[DESKTOP_NUMBER], default_desktop = workenv_config[DEFAULT_DESKTOP], commands = commands)
-    return workenv
+    return Workenv(desktop_number = workenv_config[DESKTOP_NUMBER], default_desktop = workenv_config[DEFAULT_DESKTOP], commands = commands)
