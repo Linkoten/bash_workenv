@@ -1,10 +1,11 @@
 import typer
 import os
 import time
+import subprocess
 from parser import parse_value
 
 def run_bin(bin: str, args: str):
-    os.system(f"{bin} {args}")
+    subprocess.call([f"{bin}", "{args}"])
     
 def wmctrl(args):
     run_bin("wmctrl", args)
@@ -19,8 +20,8 @@ def main(workenv_name: str):
     workenv = parse_value(workenv_name)
     for workenv_command in workenv.commands:
         go_to_desktop(workenv_command.desktop)
-        run_bin(workenv_command.command, "")
-        time.sleep(2)
+        run_bin(workenv_command.command)
+        #time.sleep(2)
 
 if __name__ == "__main__":
     typer.run(main)
